@@ -4,6 +4,7 @@ require_once 'Data/PostcodeDAO.php';
 
 $dao = new PostcodeDAO();
 $lijst = $dao->getAll();
-print ("<pre>");
-print_r ($lijst);
-print ("</pre>");
+var_dump($lijst);
+print("<pre>");
+print_r($lijst);
+print("</pre>");
