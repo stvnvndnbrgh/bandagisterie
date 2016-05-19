@@ -32,4 +32,8 @@ class PostcodeDAO {
         $dbh = null;
         return $lijst;        
     }
+    
+    public function getByGemeente($gemeente){
+        
+    }
 }
