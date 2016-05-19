@@ -18,7 +18,7 @@ class PostcodeDAO {
     }
     
     public function getByPostcode($postcode){
-        $sql = "select postcode_id, postcode, gemeente from postcode where postcode = :postcode";
+        $sql = "select postcode_id, postcode, gemeente from postcodes where postcode = :postcode";
         $dbh = new PDO (DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
         $stmt = $dbh->prepare($sql);
         $stmt->execute(array(':postcode' => $postcode));
