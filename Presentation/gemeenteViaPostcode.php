@@ -13,8 +13,15 @@
             <input type="submit" value="Zoek">
         </form>
         <?php
-        if (isset($_GET['action']) && $_GET['action'] == "toon"){
-            
+        if (isset($_GET['action']) && $_GET['action'] == "toon"){?>
+        <p>1 gemeente of stad</p>
+        <?php    
+        }elseif (isset($_GET['action']) && $_GET['action'] == "toonalles"){?>
+        <p>meerdere gemeentes</p>
+        <?php
+        }elseif (isset($_GET['action']) && $_GET['action'] == "error"){?>
+        <p>Dit is geen postcode</p>
+        <?php
         }
         ?>
     </body>
