@@ -3,7 +3,7 @@
 require_once 'Data/PostcodeDAO.php';
 
 $dao = new PostcodeDAO();
-$lijst = $dao->getByPostcode(3001);
+$lijst = $dao->getByGemeente("mechelen");
 var_dump($lijst);
 print("<pre>");
 print_r($lijst);
