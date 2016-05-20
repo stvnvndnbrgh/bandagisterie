@@ -19,4 +19,16 @@ class AdresDAO{
         $dbh = null;
         return $lijst;
     }
+    
+    public function getById($id) {
+        $sql = "adres_id, straat, huisnummer, busnummer, adressen.postcode_id, postcode, gemeente, land from adressen, postcodes where adres_id = :id and adressen.postcode_id = postcodes.postcode_id";
+        $dbh = new PDO(DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute(array(':id' => $id));
+        $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $lijst = array();
+        foreach($resultSet as $rij) {
+            
+        }
+    }
 }
