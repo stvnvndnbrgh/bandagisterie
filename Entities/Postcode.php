@@ -2,6 +2,9 @@
 //Entities/Postcode.php
 
 class Postcode {
+    
+    private static $idMap= array();
+    
     private $id;
     private $postcode;
     private $gemeente;
@@ -12,7 +15,7 @@ class Postcode {
         $this->gemeente = $gemeente;
     }
     
-    public static function create($id, $postcode, $gemeente){
+    public static function create($id, $postcode, $gemeente){        
         if(!isset(self::$idMap[$id])) {
             self::$idMap[$id] = new Postcode($id, $postcode, $gemeente);
         }

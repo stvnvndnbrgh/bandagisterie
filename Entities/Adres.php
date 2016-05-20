@@ -2,6 +2,9 @@
 //Entities/Adres.php
 
 class Adres {
+    
+    private static $idMap= array();
+    
     private $id;
     private $straat;
     private $huisnummer;
