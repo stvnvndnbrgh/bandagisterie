@@ -12,6 +12,13 @@ class Postcode {
         $this->gemeente = $gemeente;
     }
     
+    public static function create($id, $postcode, $gemeente){
+        if(!isset(self::$idMap[$id])) {
+            self::$idMap[$id] = new Postcode($id, $postcode, $gemeente);
+        }
+        return self::$idMap[$id];
+    }
+            
     function getId() {
         return $this->id;
     }
@@ -31,7 +38,4 @@ class Postcode {
     function setGemeente($gemeente) {
         $this->gemeente = $gemeente;
     }
-
-
-
 }
