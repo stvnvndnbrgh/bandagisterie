@@ -4,24 +4,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Gemeente</title>
+        <style>
+            body{
+                font-family: arial;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        </style>
     </head>
     <body>
 
-        <form method="post" action="../zoekviapostcode.php?action=zoek">
+        <form method="post" action="zoekviapostcode.php?action=zoek">
             Postcode:<br />
-            <input type="text" name="postcode">
+            <input type="text" name="postcode" autofocus>
             <input type="submit" value="Zoek">
         </form>
         <?php
-        if (isset($_GET['action']) && $_GET['action'] == "toon"){?>
-        <p>1 gemeente of stad</p>
-        <?php    
-        }elseif (isset($_GET['action']) && $_GET['action'] == "toonalles"){?>
-        <p>meerdere gemeentes</p>
+        if (isset($_GET['paske'])){
+        foreach ($_GET['paske'] as $rij){?>
+            <p><?php print(ucwords(strtolower($rij->getGemeente())));?></p>
+        
         <?php
-        }elseif (isset($_GET['action']) && $_GET['action'] == "error"){?>
-        <p>Dit is geen postcode</p>
-        <?php
+        }
         }
         ?>
     </body>
