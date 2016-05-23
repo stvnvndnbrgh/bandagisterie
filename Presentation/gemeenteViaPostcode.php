@@ -7,7 +7,7 @@
     </head>
     <body>
 
-        <form method="post" action="../zoekviapostcode.php?action=zoek">
+        <form method="post" action="zoekviapostcode.php?action=zoek">
             Postcode:<br />
             <input type="text" name="postcode">
             <input type="submit" value="Zoek">
