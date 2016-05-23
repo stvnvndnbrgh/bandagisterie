@@ -11,7 +11,7 @@ if (isset($_GET['action']) && $_GET['action'] == "zoek"){
         exit(0);
     }elseif(sizeof($lijst) > 1){
         $_GET['paske']= $lijst;
-        include("Presentation/gemeenteViaPostcode.php");
+        include("Presentation/kiesGemeenteUitLijst.php");
         exit(0);
     }      
 }else{
