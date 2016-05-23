@@ -14,4 +14,10 @@ class PostcodeService {
         $lijst = $postcodeDAO->getByPostcode($postcode);
         return $lijst;
     }
+    
+    public function getPostcodeByGemeentenaam($gemeente){
+        $postcodeDAO = new PostcodeDAO();
+        $lijst = $postcodeDAO->getByGemeente($gemeente);
+        return $lijst;
+    }
 }

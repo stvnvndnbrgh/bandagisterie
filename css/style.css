@@ -9,3 +9,9 @@ table, td, th {
 th {
     background-color: #CCC;
 }
+
+body{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1em;
+}

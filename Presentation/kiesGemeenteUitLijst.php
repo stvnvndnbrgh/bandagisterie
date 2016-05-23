@@ -8,7 +8,7 @@
        
     </head>
     <body>
-        <h1>Kies uit lijst</h1>
+        <h1>Kies uit volgende lijst:</h1>
         <table>
             <thead>
                 <tr>

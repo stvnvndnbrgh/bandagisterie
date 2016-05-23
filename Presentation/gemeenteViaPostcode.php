@@ -4,13 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Gemeente</title>
-        <style>
-            body{
-                font-family: arial;
-                font-weight: bold;
-                font-size: 20px;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
 
@@ -30,6 +24,9 @@
         }
         }
         ?>
+            <form action="zoekviagemeentenaam.php" method="get">
+            <input type="submit" value="Kies op gemeentenaam">
+            </form>
     </body>
 </html>
 
