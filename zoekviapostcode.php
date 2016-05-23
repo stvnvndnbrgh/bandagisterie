@@ -7,13 +7,17 @@ if (isset($_GET['action']) && $_GET['action'] == "zoek"){
     $lijst = $postScv->getGemeenteByPostcode($_POST['postcode']);
     //var_dump($lijst);
     if (sizeof($lijst) == 1) {
+        $_GET['paske']= $lijst;
         include("Presentation/gemeenteViaPostcode.php");
         exit(0);
     }elseif(sizeof($lijst) > 1){
-        header("location: Presentation/gemeenteViaPostcode.php?action=toonalles");
+        $_GET['paske']= $lijst;
+        include("Presentation/gemeenteViaPostcode.php");
         exit(0);
     }else{
-        header("location: Presentation/gemeenteViaPostcode.php?action=error");
+        include("Presentation/gemeenteViaPostcode.php");
         exit(0);        
     }
+}else{
+    include("Presentation/gemeenteViaPostcode.php");
 }
