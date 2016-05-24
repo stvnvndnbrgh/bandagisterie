@@ -22,10 +22,10 @@ class Klant {
     }
     
     public static function create($id, $voornaam, $familienaam, $adres_id, $telefoonnummer, $emailadres) {
-    if (!isset(self::$idMap['$id'])) {
-        self::$idMap['$id'] = new Klant($id, $voornaam, $familienaam, $adres_id, $telefoonnummer, $emailadres);
-    }
-    
+        if (!isset(self::$idMap['$id'])) {
+            self::$idMap[$id] = new Klant($id, $voornaam, $familienaam, $adres_id, $telefoonnummer, $emailadres);
+        }
+        return self::$idMap[$id];
     }
     function getId() {
         return $this->id;
