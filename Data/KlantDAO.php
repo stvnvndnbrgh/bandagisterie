@@ -54,6 +54,6 @@ class KlantDAO{
         $stmt->execute(array(':gemeente' => $gemeente));
         $rij = $stmt->fetch(PDO::FETCH_ASSOC);
         $postcode = Postcode::create($rij['postcode_id'], $rij['postcode'], $rij['gemeente']);
-        $adresDAO = new AdresDAO();
+        
     }
 }

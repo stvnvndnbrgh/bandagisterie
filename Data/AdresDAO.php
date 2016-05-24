@@ -57,4 +57,7 @@ class AdresDAO{
             return false;
         }
     }
+    
+    public function createAdres($straat, $huisnummer, $busnummer, $postcode_id, $land){
+        sql = "insert into adressen (straat = :straat");
 }
