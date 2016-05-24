@@ -40,9 +40,9 @@ class AdresDAO{
         $sql ="select adres_id from adressen where straat = :straat and huisnummer = :huisnummer and busnummer = :busnummer and postcode_id = (select postcode_id from postcodes where gemeente = :gemeente) and land = :land";
         $dbh = new PDO(DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
         $lijst = array();
-        $busleeg = null;
+        $busleeg = 'IS NULL';
         $stmt = $dbh->prepare($sql);
-        if ($busnummer != ''){
+        if ($busnummer != null){
             $stmt->execute(array('straat' => $straat, ':huisnummer' => $huisnummer, ':busnummer' => $busnummer, ':gemeente' => $gemeente, ':land' => $land));
         }else{
             $stmt->execute(array('straat' => $straat, ':huisnummer' => $huisnummer, ':busnummer' => $busleeg, ':gemeente' => $gemeente, ':land' => $land));

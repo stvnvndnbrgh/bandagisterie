@@ -8,6 +8,8 @@ require_once 'Data/AdresDAO.php';
 
 $thing = new AdresDAO();
 $lijst = $thing->checkIfExistsAdres('Lijstersstraat', 31, null, 'Heverlee', 'Belgie');
+var_dump($lijst);
+$lijst = $thing->checkIfExistsAdres('Kardinaal Mercierlaan', 31, 41, 'Heverlee', 'Belgie');
 $size = sizeof($lijst);
 //var_dump($size);
 var_dump($lijst);

@@ -26,9 +26,45 @@
                         </td>                     
                     </tr>
                     <tr>
+                        <td>Straat: </td>
+                        <td>
+                            <input type="text" name="straat" />
+                        </td>                     
+                    </tr>
+                    <tr>
+                        <td>Huisnummer: </td>
+                        <td>
+                            <input type="text" name="huisnummer" />
+                        </td>                     
+                    </tr>
+                    <tr>
+                        <td>Busnummer: </td>
+                        <td>
+                            <input type="text" name="busnummer" />
+                        </td>                     
+                    </tr>
+                    <tr>
+                        <td>Postcode: </td>
+                        <td>
+                            <input type="text" name="postcode" />
+                        </td>                     
+                    </tr>
+                    <tr>
+                        <td>Gemeente: </td>
+                        <td>
+                            <input type="text" name="gemeente" />
+                        </td>                     
+                    </tr>
+                    <tr>
                         <td>Telefoon: </td>
                         <td>
                             <input type="text" name="tel" />
+                        </td>                     
+                    </tr>
+                    <tr>
+                        <td>E-mail: </td>
+                        <td>
+                            <input type="text" name="email" />
                         </td>                     
                     </tr>
                     <tr>
