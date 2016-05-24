@@ -47,7 +47,13 @@ class KlantDAO{
         return $lijst;
     }
     
-    public function createKlant() {
-        
+    public function createKlant($vn, $fn, $straat, $huisnummer, $busnummer, $gemeente, $land, $telefoonnummer, $email) {
+        $sql = "select postcode_id from postcodes where gemeente = :gemeente";
+        $dbh = new PDO(DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute(array(':gemeente' => $gemeente));
+        $rij = $stmt->fetch(PDO::FETCH_ASSOC);
+        $postcode = Postcode::create($rij['postcode_id'], $rij['postcode'], $rij['gemeente']);
+        $adresDAO = new AdresDAO();
     }
 }

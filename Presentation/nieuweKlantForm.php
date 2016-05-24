@@ -16,7 +16,7 @@
                     <tr>
                         <td>Voornaam: </td>
                         <td>
-                            <input type="text" name="vn" />
+                            <input type="text" name="vn" autofocus />
                         </td>                     
                     </tr>
                     <tr>
