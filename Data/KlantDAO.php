@@ -46,4 +46,8 @@ class KlantDAO{
         $dbh = null;
         return $lijst;
     }
+    
+    public function createKlant() {
+        
+    }
 }
